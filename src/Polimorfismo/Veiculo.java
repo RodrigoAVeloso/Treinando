@@ -2,6 +2,7 @@ package Polimorfismo;
 
 public abstract class Veiculo {
 	
+	protected int id;
 	protected int qtdRodas;
 	protected String marca;
 	protected String modelo;
@@ -9,15 +10,26 @@ public abstract class Veiculo {
 	
 	public Veiculo() {}
 	
-	public Veiculo(int qtdRodas, String marca, String modelo, int cilindradas) {
+	public Veiculo(int id, int qtdRodas, String marca, String modelo, int cilindradas) {
 		super();
+		this.id = id;
 		this.qtdRodas = qtdRodas;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.cilindradas = cilindradas;
 	}
 	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public abstract void trocarRodas(int preco);
+	public abstract void acelerar();
 	
 	public int getQtdRodas() {
 		return qtdRodas;
@@ -47,7 +59,7 @@ public abstract class Veiculo {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Veiculo {Modelo: " + modelo + ", marca: " + marca + ", Quantidade de rodas: " + qtdRodas + ", Cilindradas: " + cilindradas + "}.";
-	}
+		return "Veiculo {ID: " + id + ",modelo: " + modelo + ", marca: " + marca + ", Quantidade de rodas: " + qtdRodas + ", Cilindradas: " + cilindradas + "}.";
+	} 
 	
 }

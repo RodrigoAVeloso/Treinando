@@ -1,24 +1,25 @@
 package Polimorfismo;
 
-public class Carro extends Veiculo{
+public class Moto extends Veiculo{
 	
-	public Carro() {
+	
+	public Moto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Carro(int id, int qtdRodas, String marca, String modelo, int cilindradas) {
+	public Moto(int id, int qtdRodas, String marca, String modelo, int cilindradas) {
 		super(id, qtdRodas, marca, modelo, cilindradas);
 		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
 	public void acelerar() {
-		
-		System.out.println("Acelera no pedal.");
+
+		System.out.println("Acelera no manete.");
 		
 	}
-
+	
 	@Override
 	public void trocarRodas(int preco) {
 		int valorTotal = preco * qtdRodas;
