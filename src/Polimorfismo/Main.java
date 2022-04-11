@@ -6,7 +6,7 @@ public class Main {
 		Lista lista = new Lista();
 		Veiculo carro = new Carro(1,4, "Honda", "Civic", 2000);
 		Veiculo carro2 = new Carro(2, 4, "Honda", "Fit", 1000);
-		Veiculo moto = new Moto(3, 2, "Honda", "Start", 160);
+		Veiculo moto = new Moto(3, 2, "Suzuki", "Yes", 150);
 		Veiculo moto2 = new Moto(4,4, "Honda", "Titan", 160);
 		
 		lista.inserir(carro);
@@ -17,6 +17,8 @@ public class Main {
 		lista.exibir();
 		
 		carro.trocarRodas(50);
+		
+		moto.trocarRodas(35);
 		
 		Veiculo pesquisa = lista.pesquisarId(0);
 		
